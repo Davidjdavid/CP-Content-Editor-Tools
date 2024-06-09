@@ -19,6 +19,7 @@
        let date = document.getElementsByClassName('agendaDate');
        let descriptionPrompt = prompt("Enter your descriton", "DEPARTMENT NAME HERE Regular Meeting Agenda (PDF)");
 
+       // Loops through each file name to add the date and description
        for (var i = 0; i < date.length; i++) {
             date[i].value = file[i].innerText.replace(".pdf", "").slice(0, 2) + '/' + file[i].innerText.slice(3, 5) + '/' + file[i].innerText.slice(6, 11).replace(".pdf", "");
             elements[i].innerText = descriptionPrompt;
