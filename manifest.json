@@ -12,9 +12,6 @@
         "matches": ["*://*/admin/AgendaCenter/MultipleUploadSavePage/*"]
       }
     ],
-    "permissions": [
-        "activeTab"
-    ],
     "host_permissions": [
         "*://*/admin/AgendaCenter/MultipleUploadSavePage/*"
     ]
