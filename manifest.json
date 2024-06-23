@@ -1,18 +1,18 @@
 {
     "manifest_version": 3,
     "name": "Auto Agenda Center",
-    "description": "Adds buttons to the agenda center to auto fill in names/dates",
-    "version": "1.0",
+    "description": "Adds buttons to the CivicPlus Central sites for automation and quality of life improvements",
+    "version": "1.2.0",
     "action": {
       "default_icon": "hello_extensions.png"
     },
     "content_scripts": [
       {
-        "js": ["scripts/agenda.js"],
+        "js": ["scripts/agenda.js", "scripts/dateFinder.js"],
         "matches": ["*://*/admin/AgendaCenter/MultipleUploadSavePage/*"]
       },
       {
-        "js": ["scripts/archive.js"],
+        "js": ["scripts/archive.js", "scripts/dateFinder.js"],
         "matches": ["*://*/admin/ArchiveCenter/MultipleUploadSavePage/*"]
       }
     ],
