@@ -8,14 +8,19 @@
     },
     "content_scripts": [
       {
-        "js": ["scripts/content.js"],
+        "js": ["scripts/agenda.js"],
         "matches": ["*://*/admin/AgendaCenter/MultipleUploadSavePage/*"]
+      },
+      {
+        "js": ["scripts/archive.js"],
+        "matches": ["*://*/admin/ArchiveCenter/MultipleUploadSavePage/*"]
       }
     ],
     "permissions": [
         "activeTab"
     ],
     "host_permissions": [
-        "*://*/admin/AgendaCenter/MultipleUploadSavePage/*"
+        "*://*/admin/AgendaCenter/MultipleUploadSavePage/*",
+        "*://*/admin/ArchiveCenter/MultipleUploadSavePage/*"
     ]
   } 
