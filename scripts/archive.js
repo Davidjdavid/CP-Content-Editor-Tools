@@ -1,5 +1,3 @@
-import { extractAndFormatDate } from 'scripts/dateFinder.js';
-
 // Creates the buttons
 let autoButton = document.createElement("Button");
 

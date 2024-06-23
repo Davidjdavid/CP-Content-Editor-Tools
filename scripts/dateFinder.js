@@ -24,7 +24,6 @@ function extractAndFormatDate(str) {
         /(\w+)\s+(\d{1,2})[,]?\s+(\d{2,4})/, // Month dd, yyyy or Month dd yyyy
         /(\w+)\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{2,4})/, // Month ddth, yyyy
         /(\w+\.?)\s+(\d{1,2})(?:st|nd|rd|th),?\s+(\d{2,4})/, // Month. ddth, yyyy followed by additional text
-        /(\d{2}\d{2}\d{4})/, // ddmmyyyy format
     ];
     
     // Loop to go through each of the regex patterns for a match in the file names
@@ -47,3 +46,6 @@ function extractAndFormatDate(str) {
     }
     return str.match(datePatterns);
   }
+
+// Expose the function globally
+window.extractAndFormatDate = extractAndFormatDate;

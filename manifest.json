@@ -1,11 +1,23 @@
 {
     "manifest_version": 3,
-    "name": "Auto Agenda Center",
+    "name": "CP Content Editor Tools",
     "description": "Adds buttons to the CivicPlus Central sites for automation and quality of life improvements",
     "version": "1.2.0",
-    "action": {
-      "default_icon": "hello_extensions.png"
+    "background": {
+      "service_worker": "scripts/background.js",
+      "type": "module"
     },
+    "action": {
+      "default_icon": "icons/cp16.png"
+    },
+    "icons": {
+      "16": "icons/cp16.png",
+      "24": "icons/cp24.png",
+      "32": "icons/cp32.png",
+      "48": "icons/cp48.png",
+      "96": "icons/cp96.png",
+      "128": "icons/cp128.png"
+  },
     "content_scripts": [
       {
         "js": ["scripts/agenda.js", "scripts/dateFinder.js"],
@@ -23,4 +35,4 @@
         "*://*/admin/AgendaCenter/MultipleUploadSavePage/*",
         "*://*/admin/ArchiveCenter/MultipleUploadSavePage/*"
     ]
-  } 
+} 
